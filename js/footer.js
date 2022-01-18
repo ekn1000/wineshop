@@ -9,14 +9,14 @@ footer.innerHTML = (`<div id=copyright>
 
 <a href="#" class="toTop" title="to top"><img src="../img/totop.png" alt=""></a>`)
 const footerText = footer.querySelector("#copyright span")
-language_flag_am.addEventListener("click", function () {
+language_flag_en.addEventListener("click", function () {
     localStorage.setItem("language","am");
     footerText.innerHTML = "© Wine House - Բոլոր իրավունքները պաշտպանված են 2021"
     footerLanguage()
 })
 
 
-language_flag_en.addEventListener("click", function () {
+language_flag_am.addEventListener("click", function () {
     localStorage.setItem("language","en");
     footerText.innerHTML = "© Wine House - All Rights Reserved 2021"
     footerLanguage()

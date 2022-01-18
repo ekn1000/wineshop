@@ -23,13 +23,13 @@ document.title = `Wine House | ${wineName}`
 document.querySelector(".content-product-image img").src = `../img/wines/wine${index}.png`
 
 let winetext = document.querySelector(".content-product-description-text")
-language_flag_am.addEventListener("click", function () {
+language_flag_en.addEventListener("click", function () {
     localStorage.setItem("language","am");
     wineInfoLanguage();
 })
 
 
-language_flag_en.addEventListener("click", function () {
+language_flag_am.addEventListener("click", function () {
     localStorage.setItem("language","en");
     wineInfoLanguage();
 })

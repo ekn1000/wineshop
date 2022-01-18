@@ -36,14 +36,14 @@ if (!localStorage.getItem("language")) {
 
 const menuText = header.querySelectorAll("ul span")
 
-language_flag_am.addEventListener("click", function () {
+language_flag_en.addEventListener("click", function () {
     localStorage.setItem("language", "am")
     menuText[0].innerHTML = "Գլխավոր"
     menuText[1].innerHTML = "Տեսակներ"
     menuText[2].innerHTML = "Պատմություն"
 })
 
-language_flag_en.addEventListener("click", function () {
+language_flag_am.addEventListener("click", function () {
     localStorage.setItem("language", "en")
     menuText[0].innerHTML = "Home"
     menuText[1].innerHTML = "Wines"
