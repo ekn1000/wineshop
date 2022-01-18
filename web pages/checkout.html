@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/67f3fb951a.js" crossorigin="anonymous" defer></script>
+    <title>Wine House | checkout</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/header/logo.png" type="image/x-icon" />
+</head>
+
+<body>
+
+    <header></header>
+
+    <div class="checkout">
+
+
+
+        <div class="purchase-detalis">
+            <h2>Detalis</h2>
+            <p>Wine<b>Takar Rosé</b></p>
+            <p>Quanity <b><i class="fas fa-shopping-cart"></i> + 1</b></p>
+            <p>Total<b>$29.99</b></p>
+        </div>
+
+        <div class="checkout-information">
+            <h2>Your basic information</h2>
+            <div class="billing-detalis">
+                <input type="text" placeholder="First Name" id="first-name">
+                <input type="text" placeholder="Last Name" id="last-name">
+                <input type="email" placeholder="Email Address" id="email">
+                <input type="text" placeholder="Street" id="street">
+                <input type="text" placeholder="Country" id="country">
+                <input type="text" placeholder="City" id="city">
+            </div>
+            <div class="payment-method">
+                <input name="payment method" type="radio" id="creditcard" checked>
+
+                <input name="payment method" type="radio" id="paypal">
+                <svg id="check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <div class="payfromcard">
+                    <input type="text" placeholder="card number" id="cardnumber">
+                    <input type="text" placeholder="mm/yy" id="mm/yy">
+                    <input type="text" placeholder="CVV" id="cvv">
+                    <input type="submit" value="Buy Now">
+                </div>
+                <div class="payfrompaypal">
+
+                    <a href="https://www.paypal.com/am/home" target="blank">
+                        <img src="../img/checkout/paypaypal.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer></footer>
+
+
+    <script src="../js/header.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/footer.js"></script>
+
+    <script>
+
+        let index = sessionStorage.getItem("index")
+        document.getElementsByTagName("b")[0].innerHTML = JSON.parse(sessionStorage.getItem(`product${index - 1}`)).name
+        document.getElementsByTagName("b")[2].innerHTML = "$" + JSON.parse(sessionStorage.getItem(`product${index - 1}`)).price + ".00"
+
+    </script>
+</body>
+
+</html>
